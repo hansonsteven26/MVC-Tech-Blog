@@ -6,7 +6,7 @@ createPost.addEventListener('click', async (event) => {
 
   const title = document.querySelector('input[name="post-title"]').value.trim();
   const content = document
-    .querySelector('input[name="post-content"]')
+    .querySelector('textarea[name="post-content"]')
     .value.trim();
   console.log(`title: ${title}  content: ${content}`);
 
