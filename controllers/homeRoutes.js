@@ -70,4 +70,15 @@ router.get('/profile', async (req, res) => {
   }
 });
 
+router.get('/login', (req, res) => {
+  try {
+    if (req.session.logged_in) {
+      res.redirect('/profile');
+      return;
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
 module.exports = router;
