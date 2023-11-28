@@ -1,10 +1,12 @@
-const newPost = document.querySelector('#new-post');
+const createPost = document.querySelector('#createPost');
 
-newPost.addEventListener('submit', async (event) => {
+createPost.addEventListener('click', async (event) => {
   event.preventDefault();
+  console.log('inside click');
 
   const title = document.querySelector('#post-title').value.trim();
   const content = document.querySelector('#post-content').value.trim();
+  console.log(`title: ${title}  content: ${content}`);
 
   if (title && content) {
     const response = await fetch('/api/posts', {
