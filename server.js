@@ -9,6 +9,7 @@ const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/your-database-name');
 const PORT = process.env.PORT || 3001;
 
 // Set up Handlebars.js engine with custom helpers
