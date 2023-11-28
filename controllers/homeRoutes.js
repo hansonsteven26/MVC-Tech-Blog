@@ -7,6 +7,14 @@ router.get('/', async (req, res) => {
     const postData = await Post.findAll({
       include: [
         {
+          model: Comment,
+          attributes: ['id', 'content', 'date_created', 'user_id', 'post_id'],
+          include: {
+            model: user,
+            attributes: ['username'],
+          },
+        },
+        {
           model: User,
           attributes: ['name'],
         },
@@ -29,6 +37,14 @@ router.get('/post/:id', async (req, res) => {
     const postData = await Post.findByPk(req.params.id, {
       include: [
         {
+          model: Comment,
+          attributes: ['id', 'content', 'date_created', 'user_id', 'post_id'],
+          include: {
+            model: User,
+            attributes: ['username'],
+          },
+        },
+        {
           model: User,
           attributes: ['name'],
         },
@@ -50,11 +66,16 @@ router.get('/profile', async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: {
-        exclude: ['password']
+        exclude: ['password'],
       },
       include: [
         {
           model: Post,
+          include: [
+            {
+              model: Comment,
+            },
+          ],
         },
       ],
     });
@@ -79,6 +100,6 @@ router.get('/login', (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-})
+});
 
 module.exports = router;
