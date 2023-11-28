@@ -2,7 +2,7 @@
     <h3 class="posts">Comments</h3>
     {{#each comments}}
         <div class="post-details">
-            <p>{{this.text}}</p>
+            <p>{{this.content}}</p>
             <p>{{this.user.username}}, {{format_date this.date_created}}</p>
         </div>
     {{/each}}

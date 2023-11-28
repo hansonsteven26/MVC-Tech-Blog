@@ -4,7 +4,7 @@ newComment.addEventListener('submit', async (event) => {
   event.preventDefault();
 
   const text = document.querySelector('#comment-text').value.trim();
-  const postId = document.querySelector('#post-id').value.trim();
+  const postId = document.querySelector('#post-id').value;
 
   if (text) {
     const response = await fetch('/api/comments', {
