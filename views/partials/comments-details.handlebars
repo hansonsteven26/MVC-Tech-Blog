@@ -1,0 +1,17 @@
+<section class="posts">
+    <h3 class="posts">Comments</h3>
+    {{#each comments}}
+        <div class="post-details">
+            <p>{{this.text}}</p>
+            <p>{{this.user.username}}, {{format_date this.date_created}}</p>
+        </div>
+    {{/each}}
+</section>
+
+<form class="card" action="/comment" method="POST">
+    <div class="form-group">
+        <label for="comment">Add a Comment:</label>
+        <textarea class="post-details" name="comment" required></textarea>
+    </div>
+    <button type="submit">Submit</button>
+</form>
