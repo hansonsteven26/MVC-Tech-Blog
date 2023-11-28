@@ -8,10 +8,10 @@
     {{/each}}
 </section>
 
-<form class="card" action="/comment" method="POST">
+<form id="comment-form" class="card" action="/comment" method="POST">
     <div class="form-group">
         <label for="comment">Add a Comment:</label>
-        <textarea class="post-details" name="comment" required></textarea>
+        <textarea id="comment-text" class="post-details" name="comment"></textarea>
     </div>
     <button type="submit">Submit</button>
 </form>

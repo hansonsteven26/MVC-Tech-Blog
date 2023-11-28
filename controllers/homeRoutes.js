@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const { Post, User } = require('../models');
+const { Post, User, Comment } = require('../models');
 const authenticated = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', authenticated, async (req, res) => {
   try {
     const postData = await Post.findAll({
       include: [
@@ -10,13 +10,13 @@ router.get('/', async (req, res) => {
           model: Comment,
           attributes: ['id', 'content', 'date_created', 'user_id', 'post_id'],
           include: {
-            model: user,
+            model: User,
             attributes: ['username'],
           },
         },
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['username'],
         },
       ],
     });
@@ -32,7 +32,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/post/:id', async (req, res) => {
+router.get('/post/:id', authenticated, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -46,7 +46,7 @@ router.get('/post/:id', async (req, res) => {
         },
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['username'],
         },
       ],
     });
@@ -62,7 +62,7 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
-router.get('/profile', async (req, res) => {
+router.get('/profile', authenticated, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: {

@@ -1,42 +1,52 @@
 [
   {
-    "content": "Great post! I love the insights you shared.",
-    "date_created": "2023-11-28T10:30:00"
+    "user_id": 1,
+    "post_id": 1,
+    "content": "Great post! I really enjoyed reading it."
   },
   {
-    "content": "This is so interesting. Can't wait to learn more!",
-    "date_created": "2023-11-28T11:15:00"
+    "user_id": 2,
+    "post_id": 2,
+    "content": "Interesting insights! Looking forward to more."
   },
   {
-    "content": "Wow, this is inspiring. Thanks for sharing!",
-    "date_created": "2023-11-28T12:00:00"
+    "user_id": 3,
+    "post_id": 3,
+    "content": "This resonates with me. Thanks for sharing!"
   },
   {
-    "content": "I completely agree with your perspective. Well said!",
-    "date_created": "2023-11-28T13:45:00"
+    "user_id": 4,
+    "post_id": 4,
+    "content": "Awesome content! Keep up the good work."
   },
   {
-    "content": "This made my day! Keep up the good work.",
-    "date_created": "2023-11-28T14:30:00"
+    "user_id": 5,
+    "post_id": 5,
+    "content": "I completely agree. Well articulated!"
   },
   {
-    "content": "Interesting point of view. I never thought about it that way.",
-    "date_created": "2023-11-28T15:15:00"
+    "user_id": 6,
+    "post_id": 6,
+    "content": "This made my day. Thanks for the positivity!"
   },
   {
-    "content": "I'm looking forward to more content from you. Subscribed!",
-    "date_created": "2023-11-28T16:00:00"
+    "user_id": 7,
+    "post_id": 7,
+    "content": "I had a similar experience. Thanks for sharing yours."
   },
   {
-    "content": "This deserves more attention. Sharing it right away!",
-    "date_created": "2023-11-28T16:45:00"
+    "user_id": 8,
+    "post_id": 8,
+    "content": "Looking forward to more content from you. Subscribed!"
   },
   {
-    "content": "I had a similar experience. Thanks for sharing yours!",
-    "date_created": "2023-11-28T17:30:00"
+    "user_id": 9,
+    "post_id": 9,
+    "content": "This deserves more attention. Sharing it right away!"
   },
   {
-    "content": "Keep shining! Your positive vibes are contagious.",
-    "date_created": "2023-11-28T18:15:00"
+    "user_id": 10,
+    "post_id": 10,
+    "content": "Keep up the great work! Your insights are valuable."
   }
 ]
